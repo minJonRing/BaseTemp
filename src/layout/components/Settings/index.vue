@@ -1,10 +1,10 @@
 <template>
   <div class="drawer-container">
     <div>
-      <h3 class="drawer-title">Page style setting</h3>
+      <h3 class="drawer-title">页面样式设置</h3>
 
       <div class="drawer-item">
-        <span>Theme Color</span>
+        <span>主题颜色</span>
         <ThemePicker
           style="float: right; height: 26px; margin: -3px 8px 0 0"
           @change="themeChange"
@@ -12,18 +12,33 @@
       </div>
 
       <div class="drawer-item">
-        <span>Open Tags-View</span>
+        <span>开启标签栏</span>
         <el-switch v-model="tagsView" class="drawer-switch" />
       </div>
 
       <div class="drawer-item">
-        <span>Fixed Header</span>
+        <span>固定头部</span>
         <el-switch v-model="fixedHeader" class="drawer-switch" />
       </div>
 
       <div class="drawer-item">
-        <span>Sidebar Logo</span>
+        <span>左侧菜单LOGO</span>
         <el-switch v-model="sidebarLogo" class="drawer-switch" />
+      </div>
+
+      <div class="drawer-item">
+        <span>菜单搜索</span>
+        <el-switch v-model="handleMenuSearch" class="drawer-switch" />
+      </div>
+
+      <div class="drawer-item">
+        <span>全面按钮</span>
+        <el-switch v-model="handleFullScreen" class="drawer-switch" />
+      </div>
+
+      <div class="drawer-item">
+        <span>尺寸切换按钮</span>
+        <el-switch v-model="handleResize" class="drawer-switch" />
       </div>
     </div>
   </div>
@@ -67,6 +82,39 @@ export default {
       set(val) {
         this.$store.dispatch("settings/changeSetting", {
           key: "sidebarLogo",
+          value: val,
+        });
+      },
+    },
+    handleMenuSearch: {
+      get() {
+        return this.$store.state.settings.menuSearch;
+      },
+      set(val) {
+        this.$store.dispatch("settings/changeSetting", {
+          key: "menuSearch",
+          value: val,
+        });
+      },
+    },
+    handleFullScreen: {
+      get() {
+        return this.$store.state.settings.fullScreen;
+      },
+      set(val) {
+        this.$store.dispatch("settings/changeSetting", {
+          key: "fullScreen",
+          value: val,
+        });
+      },
+    },
+    handleResize: {
+      get() {
+        return this.$store.state.settings.resize;
+      },
+      set(val) {
+        this.$store.dispatch("settings/changeSetting", {
+          key: "resize",
           value: val,
         });
       },

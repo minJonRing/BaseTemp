@@ -189,3 +189,41 @@ aside {
 .multiselect--active {
   z-index: 1000 !important;
 }
+
+
+// other
+.el-dialog {
+  .el-dialog__header {
+    border-bottom: 1px #dfdfdf solid;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .el-dialog__headerbtn {
+      position: inherit;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0 12px;
+  }
+
+  .el-dialog__footer {
+    border-top: 1px #dfdfdf solid;
+    padding: 12px;
+  }
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-mid {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

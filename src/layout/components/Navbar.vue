@@ -41,12 +41,28 @@
           <router-link to="/">
             <el-dropdown-item divided>主页</el-dropdown-item>
           </router-link>
+          <el-dropdown-item divided @click.native="modify = true">
+            <div>修改密码</div>
+          </el-dropdown-item>
           <el-dropdown-item divided @click.native="logout">
             <span style="display: block">退出</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
+    <!-- 修改密码 -->
+    <el-dialog
+      title="修改密码"
+      :visible.sync="modify"
+      width="400px"
+      append-to-body
+    >
+      <ModifyPassword ref="ModifyPassword" />
+      <span slot="footer">
+        <el-button @click="modify = false">取消</el-button>
+        <el-button type="primary" @click="modify = false">确认</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -58,6 +74,7 @@ import ErrorLog from "./Template/ErrorLog";
 import ScreenFull from "./Template/Screenfull";
 import SizeSelect from "./Template/SizeSelect";
 import Search from "./Template/HeaderSearch";
+import ModifyPassword from "./Template/ModifyPassword";
 
 export default {
   components: {
@@ -67,6 +84,12 @@ export default {
     ScreenFull,
     SizeSelect,
     Search,
+    ModifyPassword,
+  },
+  data() {
+    return {
+      modify: false,
+    };
   },
   computed: {
     ...mapGetters([
