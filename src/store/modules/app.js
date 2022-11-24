@@ -1,12 +1,16 @@
 import Cookies from 'js-cookie'
-
+const COMMON_ENUM = {
+  SET_LOADING: 'SET_LOADING',
+  SET_E_TYPE: 'SET_E_TYPE'
+}
 const state = {
   sidebar: {
     opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
     withoutAnimation: false
   },
   device: 'desktop',
-  size: Cookies.get('size') || 'medium'
+  size: Cookies.get('size') || 'medium',
+  loading: false
 }
 
 const mutations = {
@@ -30,6 +34,9 @@ const mutations = {
   SET_SIZE: (state, size) => {
     state.size = size
     Cookies.set('size', size)
+  },
+  [COMMON_ENUM.SET_LOADING]: (state, data) => {
+    state.loading = data
   }
 }
 
@@ -45,6 +52,9 @@ const actions = {
   },
   setSize({ commit }, size) {
     commit('SET_SIZE', size)
+  },
+  setLoading({ commit }, data = true) {
+    commit(COMMON_ENUM.SET_LOADING, data)
   }
 }
 

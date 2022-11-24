@@ -1,14 +1,25 @@
 import variables from '@/styles/element-variables.scss'
 import defaultSettings from '@/settings'
 
-const { showSettings, tagsView, fixedHeader, sidebarLogo } = defaultSettings
+const { showSettings, tagsView, fixedHeader, sidebarLogo, fullScreen, menuSearch, resize } = defaultSettings
 
 const state = {
+  // 主题
   theme: variables.theme,
+  // 显示设置按钮
   showSettings: showSettings,
+  // 显示页面标签
   tagsView: tagsView,
+  // 固定顶部信息
   fixedHeader: fixedHeader,
-  sidebarLogo: sidebarLogo
+  // 显示右侧顶部标题-logo
+  sidebarLogo: sidebarLogo,
+  // 全屏按钮
+  fullScreen,
+  // 菜单搜索
+  menuSearch,
+  // 调整尺寸大小
+  resize
 }
 
 const mutations = {

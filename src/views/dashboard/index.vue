@@ -1,5 +1,7 @@
 <template>
-  <div class="dashboard-container">1</div>
+  <div class="dashboard-container">
+    <el-button type="primary" @click="handleClick">显示错误信息</el-button>
+  </div>
 </template>
 
 <script>
@@ -19,6 +21,11 @@ export default {
     if (!this.roles.includes("admin")) {
       this.currentRole = "editorDashboard";
     }
+  },
+  methods: {
+    handleClick() {
+      console.log(a);
+    },
   },
 };
 </script>
