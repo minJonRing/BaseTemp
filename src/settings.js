@@ -55,6 +55,11 @@ module.exports = {
   * 调整尺寸大小
   * @type {boolean} true | false
   */
-  resize: true
+  resize: true,
 
+  /**
+ * 错误日期
+ * @type {boolean} true | false
+ */
+  errorBtn: true
 }

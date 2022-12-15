@@ -12,7 +12,10 @@
     </div>
     <div class="right-menu">
       <template v-if="device !== 'mobile'">
-        <ErrorLog class="errLog-container right-menu-item hover-effect" />
+        <ErrorLog
+          v-if="errorBtn"
+          class="errLog-container right-menu-item hover-effect"
+        />
         <Search v-if="menuSearch" id="header-search" class="right-menu-item" />
         <ScreenFull
           v-if="fullScreen"
@@ -99,6 +102,7 @@ export default {
       "fullScreen",
       "menuSearch",
       "resize",
+      "errorBtn",
     ]),
   },
   methods: {

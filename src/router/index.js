@@ -8,6 +8,7 @@ import Layout from '@/layout'
 
 /* Router Modules */
 import domeRouter from '@/modules/zDome/router/index'
+import documentRouter from '@/modules/yDocument/router/index'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -102,6 +103,7 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   /** when your routing map is too long, you can split it into small modules **/
+  documentRouter,
   domeRouter,
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

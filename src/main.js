@@ -4,6 +4,8 @@ import Cookies from 'js-cookie'
 
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 
+import Vant from 'vant'
+
 import Element from 'element-ui'
 import ElementPro from 'tqr-vue-element-pro'
 import 'tqr-vue-element-pro/lib/tqr-vue-element-pro.css'
@@ -37,6 +39,16 @@ if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
   mockXHR()
 }
+
+// 全局组价
+import btnReturn from '@/components/common/btn.return'
+
+Vue.use({
+  install(Vue) {
+    Vue.component('btnReturn', btnReturn)
+  }
+})
+Vue.use(Vant)
 
 Vue.use(Element, {
   size: Cookies.get('size') || 'medium', // set element-ui default size

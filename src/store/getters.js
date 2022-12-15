@@ -1,3 +1,5 @@
+import { getters as documentGetters } from '@/modules/yDocument/store'
+
 const getters = {
   // 系统设置
   loading: state => state.app.loading,
@@ -9,6 +11,7 @@ const getters = {
   fullScreen: state => state.settings.fullScreen,
   menuSearch: state => state.settings.menuSearch,
   resize: state => state.settings.resize,
+  errorBtn: state => state.settings.errorBtn,
   // 用户信息
   token: state => state.user.token,
   avatar: state => state.user.avatar,
@@ -16,6 +19,8 @@ const getters = {
   introduction: state => state.user.introduction,
   roles: state => state.user.roles,
   permission_routes: state => state.permission.routes,
-  errorLogs: state => state.errorLog.logs
+  errorLogs: state => state.errorLog.logs,
+  // more
+  ...documentGetters
 }
 export default getters

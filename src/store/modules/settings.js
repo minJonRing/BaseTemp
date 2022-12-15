@@ -1,7 +1,7 @@
 import variables from '@/styles/element-variables.scss'
 import defaultSettings from '@/settings'
 
-const { showSettings, tagsView, fixedHeader, sidebarLogo, fullScreen, menuSearch, resize } = defaultSettings
+const { showSettings, tagsView, fixedHeader, sidebarLogo, fullScreen, menuSearch, resize, errorBtn } = defaultSettings
 
 const state = {
   // 主题
@@ -19,7 +19,9 @@ const state = {
   // 菜单搜索
   menuSearch,
   // 调整尺寸大小
-  resize
+  resize,
+  // 错误日志
+  errorBtn
 }
 
 const mutations = {

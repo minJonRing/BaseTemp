@@ -1,6 +1,6 @@
 <template>
   <div class="see">
-    <Info />
+    <Info read />
   </div>
 </template>
 

@@ -12,52 +12,7 @@ const domeRouter = {
     icon: 'component'
   },
   children: [
-    {
-      path: 'tqr',
-      component: () => import('@/views'),
-      name: 'Tqr',
-      meta: {
-        title: '自定义模板使用'
-      },
-      children: [
-        {
-          path: 'list',
-          component: () => import('@/modules/zDome/views/tqr/list'),
-          name: 'TqrList',
-          meta: {
-            title: '自定义模板使用'
-            // if do not set roles, means: this page does not require permission
-          }
-        },
-        {
-          path: 'add',
-          component: () => import('@/modules/zDome/views/tqr/add'),
-          name: 'TqrAdd',
-          meta: {
-            title: '自定义模板使用-新增'
-            // if do not set roles, means: this page does not require permission
-          }
-        },
-        {
-          path: 'edit',
-          component: () => import('@/modules/zDome/views/tqr/edit'),
-          name: 'TqrEdit',
-          meta: {
-            title: '自定义模板使用-编辑'
-            // if do not set roles, means: this page does not require permission
-          }
-        },
-        {
-          path: 'see',
-          component: () => import('@/modules/zDome/views/tqr/see'),
-          name: 'TqrSee',
-          meta: {
-            title: '自定义模板使用-查看'
-            // if do not set roles, means: this page does not require permission
-          }
-        }
-      ]
-    },
+
     {
       path: 'permission',
       component: () => import('@/views'),

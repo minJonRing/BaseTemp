@@ -1,5 +1,5 @@
 <template>
-  <div class="see">
+  <div class="edit">
     <Info />
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 import Info from "./info";
 export default {
-  name: "See",
+  name: "CompanyEdit",
   components: {
     Info,
   },

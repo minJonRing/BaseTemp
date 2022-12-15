@@ -40,6 +40,11 @@
         <span>尺寸切换按钮</span>
         <el-switch v-model="handleResize" class="drawer-switch" />
       </div>
+
+      <div class="drawer-item">
+        <span>显示错误日期</span>
+        <el-switch v-model="handleErrorBtn" class="drawer-switch" />
+      </div>
     </div>
   </div>
 </template>
@@ -115,6 +120,17 @@ export default {
       set(val) {
         this.$store.dispatch("settings/changeSetting", {
           key: "resize",
+          value: val,
+        });
+      },
+    },
+    handleErrorBtn: {
+      get() {
+        return this.$store.state.settings.errorBtn;
+      },
+      set(val) {
+        this.$store.dispatch("settings/changeSetting", {
+          key: "errorBtn",
           value: val,
         });
       },
