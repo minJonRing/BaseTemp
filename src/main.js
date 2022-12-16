@@ -51,8 +51,8 @@ Vue.use({
 Vue.use(Vant)
 
 Vue.use(Element, {
-  size: Cookies.get('size') || 'medium', // set element-ui default size
-  locale: enLang // 如果使用中文，无需设置，请删除
+  size: Cookies.get('size') || 'mini', // set element-ui default size
+  // locale: enLang // 如果使用中文，无需设置，请删除
 })
 
 Vue.use(ElementPro, {

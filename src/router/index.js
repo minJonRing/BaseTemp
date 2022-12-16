@@ -102,6 +102,11 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
+  {
+    path: '/dome-ce',
+    component: () => import('@/views/dome'),
+    meta: { title: 'DOME_CE', icon: 'user', }
+  },
   /** when your routing map is too long, you can split it into small modules **/
   documentRouter,
   domeRouter,

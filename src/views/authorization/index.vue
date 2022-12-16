@@ -6,7 +6,7 @@
         <div class="d2"></div>
         <div class="d3"></div>
       </div>
-      <div class="jz">加载中</div>
+      <div class="jz">授权登录成功中......</div>
     </div>
   </div>
 </template>
@@ -32,12 +32,10 @@ export default {
           try {
             Notification.success("授权登录成功");
             const { origin, pathname } = window.location;
-            setTimeout(() => {
-              window.open(origin + pathname);
-            }, 100);
+            window.open(origin + pathname);
             setTimeout(() => {
               window.close();
-            }, 1000);
+            }, 600);
           } catch (error) {}
         })
         .catch(() => {
@@ -63,6 +61,7 @@ export default {
   align-items: center;
   justify-content: center;
   .tip {
+    font-size: 0;
     div {
       display: inline-block;
       width: 16px;
