@@ -58,7 +58,7 @@ module.exports = {
   resize: true,
 
   /**
- * 错误日期
+ * 错误日志
  * @type {boolean} true | false
  */
   errorBtn: true

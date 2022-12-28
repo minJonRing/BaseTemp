@@ -64,10 +64,10 @@
       </el-form-item>
       <el-form-item>
         <div class="username-help">
-          <router-link to="/login">
+          <router-link to="/register">
             <el-button type="text">还没有账号?马上注册!</el-button>
           </router-link>
-          <router-link to="/login">
+          <router-link to="/forget">
             <el-button type="text" style="color: #e6a23c">忘记密码</el-button>
           </router-link>
         </div>

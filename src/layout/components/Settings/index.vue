@@ -42,7 +42,7 @@
       </div>
 
       <div class="drawer-item">
-        <span>显示错误日期</span>
+        <span>显示错误日志</span>
         <el-switch v-model="handleErrorBtn" class="drawer-switch" />
       </div>
     </div>
